@@ -1,0 +1,29 @@
+:root {
+  --s8-ink: #1f2b24;
+  --s8-muted: #56645d;
+  --s8-paper: #f5f7f4;
+  --s8-surface: #ffffff;
+  --s8-line: #d9e0dc;
+  --s8-green: #006b5a;
+  --s8-green-dark: #06483f;
+  --s8-gold: #f2c14e;
+  --s8-copper: #b4511d;
+  --s8-blue: #4962a3;
+  --s8-shadow: 0 18px 50px rgba(31, 43, 36, 0.13);
+  --s8-radius: 8px;
+  --s8-font-sans: Arial, Helvetica, sans-serif;
+  --s8-page-gutter: clamp(1rem, 5vw, 5rem);
+  --s8-section-y: clamp(3rem, 8vw, 6rem);
+
+  --ink: var(--s8-ink);
+  --muted: var(--s8-muted);
+  --paper: var(--s8-paper);
+  --surface: var(--s8-surface);
+  --line: var(--s8-line);
+  --green: var(--s8-green);
+  --green-dark: var(--s8-green-dark);
+  --gold: var(--s8-gold);
+  --copper: var(--s8-copper);
+  --blue: var(--s8-blue);
+  --shadow: var(--s8-shadow);
+}
