@@ -1,0 +1,29 @@
+{
+  "id": "software8",
+  "name": "Software8",
+  "status": "foundation-in-formation",
+  "primaryDomain": "software8.de",
+  "domains": [
+    "software8.de",
+    "www.software8.de"
+  ],
+  "path": ".",
+  "language": {
+    "primary": "de",
+    "secondary": [
+      "en"
+    ]
+  },
+  "mission": "Organisation as Code as a non-profit open-source foundation for recurring SME business processes.",
+  "firstVertical": "notariat8.de",
+  "styleguide": {
+    "path": "styleguide",
+    "tokens": "styleguide/tokens.css",
+    "role": "canonical CI source for Software8 vertical sites"
+  },
+  "notes": [
+    "Legal pages contain placeholders until operator details are finalized.",
+    "This repository is deployed as a single GitHub Pages site from the repository root.",
+    "Software8 is intended as a non-profit structure in formation."
+  ]
+}

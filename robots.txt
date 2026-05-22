@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://software8.de/sitemap.xml
