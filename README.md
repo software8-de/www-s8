@@ -29,6 +29,18 @@ abgeleitete Vertical-Seiten.
 - [assets/site.css](assets/site.css) nutzt diese Tokens direkt und dient als
   erste Referenzimplementierung.
 
+## Gemeinsame 8-Brand-Assets
+
+Der kanonische Asset-Katalog für alle bestehenden und künftigen `*8`-Repos
+liegt in [bild8/www-b8](https://github.com/bild8/www-b8) und wird über
+`https://bild8.de/assets/8/` veröffentlicht.
+
+`www-s8` nutzt daraus das `s8`-Icon direkt als Favicon:
+`https://bild8.de/assets/8/svg/s8.svg`. Neue Vertical- oder Produkt-Repos
+sollen denselben Katalog referenzieren statt eigene 8er-Logo-Kopien zu
+pflegen. Lokale Kopien sind nur für Offline- oder Testflächen vorgesehen und
+müssen aus `bild8/www-b8` synchronisiert bleiben.
+
 ## GitHub Pages
 
 - Source: `Deploy from a branch`
