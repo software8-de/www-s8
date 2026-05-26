@@ -32,6 +32,24 @@ Innerhalb dieses Repos nutzt `assets/site.css` den relativen Import:
 @import url("../styleguide/tokens.css");
 ```
 
+## Gemeinsame 8-Brand-Assets
+
+Alle bestehenden und künftigen `*8`-Repos sollen ihre 8er-Icons aus
+[bild8/www-b8](https://github.com/bild8/www-b8) beziehen. Der veröffentlichte
+Katalog liegt unter:
+
+```text
+https://bild8.de/assets/8/svg/{id}.svg
+https://bild8.de/assets/8/png_32/{id}_32.png
+https://bild8.de/assets/8/png_192/{id}_192.png
+https://bild8.de/assets/8/png_526/{id}_526.png
+```
+
+`{id}` steht für `a8`, `b8`, ..., `z8`. Dieses Repo nutzt `s8`; Notariat8/NaC
+nutzt `n8`; `www-b8` bleibt Quelle und Auslieferungsort für den Gesamtkatalog.
+Repos sollen die CDN-Pfade referenzieren. Lokale Kopien sind nur für
+Offline-Oberflächen oder Tests zulässig und müssen aus `www-b8` stammen.
+
 ## Nächste Ausbaustufe
 
 Später sollen hier gemeinsame Layout-Templates, Komponentenregeln und

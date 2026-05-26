@@ -16,21 +16,31 @@ test -f en/imprint.html
 test -f en/privacy.html
 test -f assets/site.css
 test -f assets/site.js
-test -f assets/software8-field.svg
 test -f styleguide/README.md
 test -f styleguide/tokens.css
+test ! -e assets/software8-field.svg
+
+S8_ICON_URL='https://bild8.de/assets/8/svg/s8.svg'
 
 grep -qx 'software8.de' CNAME
 grep -q '<link rel="canonical" href="https://software8.de/">' index.html
 grep -q '<link rel="alternate" hreflang="en" href="https://software8.de/en/">' index.html
+for html_file in index.html gemeinnuetzigkeit.html transparenz.html impressum.html kontakt.html en/index.html en/imprint.html en/privacy.html 404.html datenschutz.html foerderung.html; do
+  grep -q "$S8_ICON_URL" "$html_file"
+  grep -q 'class="brand-mark"' "$html_file"
+done
+! grep -R 'assets/favicon.svg\|../assets/favicon.svg' index.html gemeinnuetzigkeit.html transparenz.html impressum.html kontakt.html en/index.html en/imprint.html en/privacy.html 404.html datenschutz.html foerderung.html
+grep -q "<link rel=\"preload\" href=\"$S8_ICON_URL\" as=\"image\">" index.html
+grep -q "<link rel=\"preload\" href=\"$S8_ICON_URL\" as=\"image\">" en/index.html
+grep -q "<img class=\"hero-image\" src=\"$S8_ICON_URL\"" index.html
+grep -q "<img class=\"hero-image\" src=\"$S8_ICON_URL\"" en/index.html
+! grep -R 'software8-field.svg' index.html en/index.html assets/site.css
 
 grep -q 'Organisation as Code' index.html
 grep -q 'gemeinnütz' index.html
 grep -q 'notariat8.de' index.html
 grep -q 'Eine gemeinnützige Marke' index.html
 grep -q 'CI-Quelle' index.html
-grep -q 'software8-field.svg' index.html
-grep -q 'software8-field.svg' en/index.html
 grep -q 'Organisation as Code' en/index.html
 grep -q 'Software8 gGmbH in Gründung' impressum.html
 grep -q 'Oliver Funk' impressum.html
@@ -49,6 +59,10 @@ grep -q 'Öffentliches Repository' transparenz.html
 
 grep -q -- '--s8-ink' styleguide/tokens.css
 grep -q 'verbindliche CI-Quelle' styleguide/README.md
+grep -q 'bild8.de/assets/8' README.md
+grep -q 'bild8/www-b8' README.md
+grep -q 'bild8.de/assets/8' styleguide/README.md
+grep -q 'bild8/www-b8' styleguide/README.md
 grep -q '@import url("../styleguide/tokens.css")' assets/site.css
 test ! -e assets/nac-control-plane.png
 ! grep -q 'nac-control-plane' assets/site.css
